@@ -1,0 +1,285 @@
+@mixin wrapflex()
+    display: flex
+    flex-direction: column
+    align-items: center
+
+html,body
+    margin: 0px
+    padding: 0px
+    font-family: 微軟正黑體
+    font-size: 16px
+    list-style: none
+    // border: solid 1px #000
+
+header
+    background-image: url("../img/bannerImg.jpg")
+    width: 100%
+    padding: 30px 0px 60px
+    box-sizing: border-box
+    background-size: cover
+    background-position: center
+    text-align: center
+h1.mainTitle
+    display: block
+    font-size: 65px
+    color: #fff
+    font-weight: 900
+    text-shadow: 0 0 20px #000
+    padding: 60px
+    .subTitle
+        font-size: 28px
+        display: block
+        
+
+.districtSelect
+    width: 45%
+    background-color: rgba(255,255,255,0.7)
+    border: 3px solid #fff
+    border-radius: 3px
+    padding: 10px
+    margin-top: -5px
+    font-size: 14px
+    font-weight: 900
+    color: #000
+    line-height: 20px
+    font-family: 微軟正黑體
+
+    // 取消點擊外框
+    outline: none
+    cursor: pointer
+    // 移除 select 箭頭
+    appearance: none
+
+.content
+    +wrapflex
+
+.container
+    max-width: 960px
+    width: 100%
+    +wrapflex
+
+.popularDistrict
+    width: 80%
+    max-width: 800px
+    height: auto
+    background-color: #fff
+    margin-top: -40px
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.6)
+    border-radius: 4px
+    padding: 5px
+    h2
+        font-size: 20px
+        font-weight: 700
+        color: #000
+        margin-top: 20px
+        margin-left: 26px
+
+.popularList
+    align-items: center
+    justify-content: center
+    li 
+        margin: 10px
+        
+.popularBlock
+    margin: auto
+    text-align: center
+    line-height: 30px
+    letter-spacing: 1px
+    font-weight: 700
+    display: block
+    padding: 10px 20px
+    width: 80px
+    height: 30px
+    text-decoration: none
+    color: #fff
+    
+.separationLine
+    width: 95%
+    margin: 30px 0 30px
+
+.line
+    border-bottom: 4px solid #000
+    position: relative
+    animation: change 5s infinite
+    display: flex
+    justify-content: center 
+    align-items: center
+    img
+        position: absolute
+        top: -10px
+        width: 12px
+        height: 12px
+        border: solid 2px #000
+        border-radius: 50%
+        padding: 3px
+        background-color: #fff
+        animation: rollImg 5s infinite
+
+@keyframes change
+    0%
+        border-bottom: 4px solid #559ac8
+    25%
+        border-bottom: 4px solid #8a82cc
+    75%
+        border-bottom: 4px solid #f5d005
+    100%
+        border-bottom: 4px solid #559ac8
+
+@keyframes rollImg
+    0%
+        border: solid 2px #559ac8
+    25%
+        border: solid 2px #8a82cc
+    50%
+        transform: rotateY(180deg)
+    75%
+        border: solid 2px #f5d005
+    100%
+        border: solid 2px #559ac8
+
+.districtName
+    font-size: 26px
+    letter-spacing: 1px
+    font-weight: 700
+    color: #8a82cc
+    margin: 15px 0 20px
+
+.districtContent
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+
+.contentCard
+    width: 100%
+    height: 100%
+    margin: 15px 10px
+    border-radius: 6px
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4)
+
+.bgImg
+    background-size: cover
+    background-position: center center
+
+.cardHeader
+    width: 100%
+    height: 150px
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    border-radius: 6px 6px 0px 0px
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1)
+    h2,p
+        margin: 10px 13px
+        color: #fff
+        text-shadow: 0 0 50px #000
+        font-weight: 500
+    h2
+        font-size: 18px
+        font-weight: 700
+.bgImg
+    background-size: cover
+    background-position: center center
+.cardBody
+    font-size: 13px
+    font-weight: 600
+    margin: 10px 5px 5px
+.infoImg
+    width: 12px
+    height: 16px
+    margin: 5px 10px 5px 15px
+.tag
+    img
+        margin-left: -80px
+.time, .address, .phone, .tag, .flexWrap
+    display: flex
+    align-items: center
+.flexWrap
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.pageNav
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin: 30px 0
+
+.pagePrev, .pageNext
+    line-height: 18px
+    margin: 0px 5px
+    width: 50px
+    height: 25px
+    text-align: center
+    transition: 0.3s
+    a
+        display: block
+        padding: 5px
+        font-size: 14px
+        color: #000
+        text-decoration: none
+    &:hover
+        font-weight: 900
+
+.pageItem
+    margin: 0 2px
+    text-align: center
+
+.pageLink
+    display: block
+    width: 25px
+    height: 25px
+    padding: 2px
+    font-size: 14px
+    color: #000000
+    text-decoration: none
+    border-radius: 50%
+    line-height: 25px
+    &:hover
+        background-color: #eee
+        color: #000
+        font-weight: 900
+        transition: 0.5s
+
+.pageLink.active
+    background-color: #000
+    color: #fff
+    font-weight: 900
+    border-radius: 50%
+    // 不成為鼠標事件
+    pointer-events: none
+
+footer
+    .info
+        padding: 25px 0 30px
+        background-color: #000
+        color: #eee
+        font-size: 14px
+        display: flex
+        justify-content: center
+        align-items: center
+        span 
+            margin: 0 10px
+        .github 
+            width: 20px
+            height: 20px
+
+
+@media screen and ( min-width: 768px )
+    h1.mainTitle
+        font-size: 80px
+        .subTitle
+            font-size: 38px
+            display: inline
+
+    .districtSelect
+        font-size: 18px
+    
+    .popularList
+        display: flex
+
+
+    .contentCard
+        width: 450px
+
