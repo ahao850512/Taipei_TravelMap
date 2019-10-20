@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        title Taipei TravelMap
+        link(rel="stylesheet" href="css/reset.css")
+        link(rel="stylesheet" href="css/style.css")
+    body
+        //- 看板
+        header
+            h1.mainTitle 高雄
+                span.subTitle 旅遊景點
+            select.districtSelect
+
+        section.content 
+            .container 
+                //- 熱門行政區
+                .popularDistrict
+                    h2 熱門行政區
+                    ul.popularList
+                        li
+                            a.popularBlock 內門區
+                        li
+                            a.popularBlock 三民區
+                        li
+                            a.popularBlock 安平區
+                        li
+                            a.popularBlock 安平區
+                            
+                //- 分隔線
+                .separationLine
+                    .line
+                        img(src="img/icons_down.png" alt="alt")
+                //- 景點內容
+                h2.districtName
+                .districtContent
+                    //- .contentCard
+                    //-     .cardHeader.bgImg(style="background-image: url('http://khh.travel/FileArtPic.ashx?id=1085&w=1280&h=960');")
+                    //-         h2 title 
+                    //-         p Lorem ipsum dolor
+                    //-     .cardBody
+                    //-         .cardInfo
+                    //-             .time
+                    //-                 img.infoImg(src="img/icons_clock.png", alt="clock") 
+                    //-                 p  開放時間
+                    //-             .address
+                    //-                 img.infoImg(src="img/icons_pin.png", alt="address")
+                    //-                 p 地址
+                    //-             .flexWrap
+                    //-                 .phone 
+                    //-                     img.infoImg(src="img/icons_phone.png", alt="phone")
+                    //-                     p 電話
+                    //-                 .tag 
+                    //-                     img.infoImg(src="img/icons_tag.png", alt="tag")
+                    //-                     p 免費
+                nav 
+                    ul.pageNav
+        footer 
+            .info
+                span 資料來源: 高雄市政府
+                span Design 2019 by Hao
+                a(href="https://github.com/ahao850512/TravelMap" target="_blank")
+                    img.github(src="img/icons_github.png", alt="")
+        script(src="js/all.js")
